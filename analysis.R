@@ -23,7 +23,7 @@ hiOL<-read.table("./data/hiOL_salmon.counts")
 
 # Load sn-RNAseq data from Jäkel et al. 2019 (GSE118257)
 geoanno<-read.table("./data/GSE118257_anno.txt", header=TRUE, stringsAsFactors = FALSE)
-geoexpr<-read.table("./data/GSE118257_expr.txt", header=TRUE, row.names=1, stringsAsFactors = FALSE)
+geoexpr<-read.table("./data/GSE118257_expr.txt.gz", header=TRUE, row.names=1, stringsAsFactors = FALSE)
 
 # Get intersection of gene names from both datasets
 hiOL<-hiOL[intersect(rownames(hiOL),rownames(geoexpr)),]
