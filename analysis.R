@@ -82,11 +82,12 @@ names(celltype_cols)<-unique(genesofinterest$Celltype)
 anno_cols<-list(Celltype=celltype_cols)
 
 pheatmap(mat,
-         color=colorRampPalette(c("blue","blue","white","yellow"))(255),
+         color=colorRampPalette(c("darkblue","blue","white","yellow"))(255),
          clustering_method = "complete",
          clustering_distance_cols = "euclidean",
          annotation_row = row_annotation,
          annotation_colors = anno_cols,
-         cluster_rows = FALSE
+         cluster_rows = FALSE,
+         gaps_row = c(7,21,26,30,32)
 )
 
